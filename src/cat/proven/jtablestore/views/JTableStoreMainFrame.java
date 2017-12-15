@@ -64,10 +64,8 @@ public class JTableStoreMainFrame extends JFrame implements ActionListener {
 
         Container pane = this.getContentPane();
         pane.setLayout(new BorderLayout());
-        //welcomePanel = new WelcomePanel(this);
-        //pane.add(welcomePanel, BorderLayout.CENTER);
-        detailsPanel = new JTableDetailsPanel(model);
-        pane.add(detailsPanel, BorderLayout.CENTER);
+        welcomePanel = new WelcomePanel(this);
+        pane.add(welcomePanel, BorderLayout.CENTER);
 
         //productPanel = new JTableProductTablePanel(model, controller);
         //pane.add(productPanel, BorderLayout.CENTER);
@@ -188,6 +186,9 @@ public class JTableStoreMainFrame extends JFrame implements ActionListener {
                     break;
                 case "searchbycode":
                     controller.searchByCode();
+                    break;
+                case "searchbyprice":
+                    controller.searchByPrice();
                     break;
                 default:
                     break;

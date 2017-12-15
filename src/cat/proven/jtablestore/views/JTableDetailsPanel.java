@@ -19,6 +19,10 @@ import javax.swing.JTextField;
 public class JTableDetailsPanel extends JPanel {
     
     
+    //detailsPanel = new JTableDetailsPanel(model);
+    //pane.add(detailsPanel, BorderLayout.CENTER);
+    
+    
     private final Store model;
     
     private JLabel labelCode;

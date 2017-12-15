@@ -87,6 +87,23 @@ public class Controller {
         }
 
     }
+    
+    public void searchByPrice() {
+
+        clear();
+        
+        
+            double price = 222;
+
+            model.findByPrice(price);
+
+            if (model.getProducts().size() > 0) {
+                view.displayProductTable(model.getProducts());
+            } else {//Product is null
+                System.out.println("product not found");
+            }
+        
+    }
 
 
 }

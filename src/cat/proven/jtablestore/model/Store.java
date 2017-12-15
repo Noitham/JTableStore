@@ -78,15 +78,15 @@ public class Store {
      * @return with the list of products with the given price or an empty store
      * if no one is found.
      */
-    public Store findByPrice(double price) {
+    public void findByPrice(double price) {
+        
+        ArrayList<Product> originalData = retrieveData();
 
-        Store found = new Store();
-        for (int i = 0; i < products.size(); i++) {
-            if (get(i).getPrice() == price) {
-                found.add(get(i));
+        for (int i = 0; i < originalData.size() - 1; i++) {
+            if (originalData.get(i).getPrice() == price) {
+                products.add(originalData.get(i));
             }
         }
-        return found;
     }
 
     /**
